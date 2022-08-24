@@ -25,9 +25,8 @@ def main():
     print('Repository path:', path)
 
     repo = Repo(path)
-    print('Branches:')
     branches = get_branch_names(repo)
-    print(branches)
+    print('Branches: ', ' '.join(branches))
     
     users = extract_users(repo, 'main') 
     print_users(users)
